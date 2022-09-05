@@ -7,4 +7,67 @@
 body {
     background-color: #DFDFDE;
     font-family: Verdana; 
+    
+}
+
+.ul{
+    list-style-type: none;
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-right: 100-px;
+    float: right;
+}
+
+li{
+    float: right;
+    display: inline;
+}
+
+li a{
+    display: block;
+    color: black;
+    padding: 8px;
+    padding-right: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    justify-content: flex-end;
+    font-family: Verdana;
+
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 65%;
+    background-color: slateblue;
+    height: 8s0vh;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.flexContainer div{
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.mySlides {
+    display:none
+}
+
+.w3-left, 
+.w3-right, 
+.w3-badge {
+    cursor:pointer
+}
+
+.w3-badge {
+    height:13px;width:13px;padding:0
 }

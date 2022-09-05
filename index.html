@@ -9,48 +9,84 @@
 </head>
 
 <body>
-    <!-- HEADER -->
     <header>
-        <section class='FlexContainer' style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start;
-        align-content: flex-start; overflow: auto; flex-direction: row; height: 100px">
-            <div style="width: 100%; height: 100px; margin: 0px; color: white; background-color: #607EAA;">
-                <nav id="navigation">
+            <div style="width: 100%; height: 100px; color: white; background-color: #607EAA;">
+                    
+                    <ul class="ul" style="text-align: right; padding-top: 30px ; float: right; ">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Layanan</a></li>
+                        <li><a href="">Article</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Home</a></li>
+                    </ul>
                     <h1 style="text-align: start ; padding-left: 100px; padding-top: 20px ;">
                         <img src="assets/image/logo.png" width="50">
                     </h1>
-                    <ul style="text-align: end; padding-right: 50px;  ">
-                        <li style="display:inline ;">Link1</li>
-                        <li style="display:inline ;">Link2</li>
-                        <li style="display:inline ;">Link3</li>
-                        <li style="display:inline ;">Link4</li>
-                        <li style="display:inline ;">Link5</li>
-                    </ul>
-
+                    
                 </nav>
-
-
             </div>
-        </section>
     </header>
-    <!-- END HEADER -->
 
-    <!-- INTRO -->
-    <section class='FlexContainer' style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start;
-                         overflow: auto; flex-direction: row;">
-        <div style="width: 100%; height: 400px; margin: 2px; background-color: #F7F5F2;">
-            <div class="intro" style="width: 200px; text-align:start ; padding-left: 100px; padding-top: 100px;">
-                <h1>Intro</h1>
-                <p>Some introduction lines
-                    about the website or company
-                </p>
-            </div>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
 
-    <!-- END INTRO -->
+<div class="w3-center mx-3">
+  <h2>Intro</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quam necessitatibus, libero enim, dicta alias dolores illo perspiciatis, excepturi corrupti officiis quo itaque cupiditate perferendis saepe recusandae id qui hic!</p>
+</div>
+<br>
 
-    <!-- KOLOM -->
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" src="assets/image/foto1.jpg" style="width:100%">
+  <img class="mySlides" src="assets/image/foto2.jpg" style="width:100%">
+  <img class="mySlides" src="assets/image/foto3.jpg" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
     <center>
+        <div class="w3-center mx-3">
+        <h2>Our Service</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet autem delectus, sed vero sint aliquid temporibus voluptas, quidem est maiores officiis rem placeat molestias veritatis esse architecto itaque! In, odit.!</p>
+    </div>
         <section class='FlexContainer' style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
             align-content: flex-start; width: 65%; height: 80vh; overflow: auto;
             flex-direction: row; margin: 80px;">
@@ -72,36 +108,32 @@
             <div style="width: 200px; height: 200px; margin: 10px; background-color: #F7F5F2;">
                 <p style=" padding: 60px;">Recent Work</p>
             </div>
+
         </section>
     </center>
-    <!-- END KOLOM -->
 
-    <!-- TWITTER FEED -->
+
     <section class='FlexContainer' style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: flex-start;
         align-content: center; overflow: auto; flex-direction: row;">
         <div style="width: 70%; height: 70px; margin: 0px; background-color: #F7F5F2;">
             <h4 style="padding: 10px ;">Twitter Feed</h4>
         </div>
     </section>
-    <!-- END TWITTER FEED -->
 
-    <!-- KOLOM -->
+    
     <footer>
-        <section class='FlexContainer' style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start;
-        align-content: flex-start; overflow: auto; flex-direction: row;">
-            <div style="width: 100%; height: 80px; margin: 5px; background-color: #607EAA;">
-                <ul style="text-align: start; padding-left: 180px ;">
-                    <li style="display:inline ;">Link1</li>
-                    <li style="display:inline ;">Link2</li>
-                    <li style="display:inline ;">Link3</li>
-                    <li style="display:inline ;">Link4</li>
-                    <li style="display:inline ;">Link5</li>
+        <div style="width: 100%; height: 100px; margin: 0px; color: white; background-color: #607EAA;">
+                <ul class="ul" style="text-align: start; padding-top: 25px; float: right; ">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Layanan</a></li>
+                    <li><a href="">Article</a></li>
+                    <li><a href="">Contact Us</a></li>
                 </ul>
-                <p style="text-align: end ; padding-right: 100px ;">copyright Info</p>
+                <p style="text-align: start ; padding-right: 100px ; padding-top: 35px ; color: white;">Copyright &copy Design Website 2022</p>
             </div>
         </section>
     </footer>
-    <!-- END KOLOM -->
 </body>
 
 </html>
